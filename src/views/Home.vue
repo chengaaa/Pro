@@ -9,7 +9,7 @@
 
     <div>
       <ul>
-        <li v-for="(item,index) in blackList" :key="index"></li>
+        <li v-for="(item,index) in blackList" :key="index"><img :src="item.img" alt=""><p>{{item.title}}</p><span>{{item.text}}</span></li>
       </ul>
     </div>
     </div>
