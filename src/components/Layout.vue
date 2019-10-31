@@ -10,11 +10,11 @@
           <router-link
             :to="'/' + item.id"
             tag="div"
+            @click.native="changeTab(index)"
             class="header-tab"
+            :class="[index == activeIndex ? 'tab-active':'']"
             v-for="(item,index) in tabList"
             :key="index"
-            :class="index == activeIndex ? 'tab-active': ''"
-            @click.native="changeTab(index)"
           >{{ item.text }}</router-link>
         </div>
          <div class="header-login-regist">
