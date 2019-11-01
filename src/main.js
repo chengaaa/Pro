@@ -8,7 +8,7 @@ import vView from 'vue-view-lazy'
 // import 'element-ui/lib/theme-chalk/index.css';
 // import ViewUI from 'view-design';
 // import 'view-design/dist/styles/iview.css';
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
 Vue.use(vView);
 
 // Vue.use(vView,{

@@ -8,9 +8,9 @@
 
     <!-- <div class="right"><span>登录</span><span>注册</span></div>
     </div>-->
-    <Layout></Layout>
+    <Layout> </Layout>
 
-    <router-view />
+   
   </div>
 </template>
 

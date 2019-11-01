@@ -27,7 +27,9 @@
       </div>
     </div>
 
-    <div class="yv-content"></div>
+    <div class="yv-content">
+      <router-view></router-view>
+    </div>
 
     <div class="yv-footer">
       <div class="yv-footer-content">
@@ -85,9 +87,12 @@
  
  
   .yv-footer {
-      height:240px;position:absolute;bottom:-1500px;left:0px;
+      height:240px;
+      position:absolute;
+      left:0px;
+
     //  position: fixed;
-    //  bottom: 0; 
+     bottom: 0; 
     width: 100%;
     background: #840000;
     color: darkgray;
