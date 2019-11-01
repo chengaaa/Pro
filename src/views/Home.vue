@@ -57,7 +57,6 @@
     .right {
       width: 400px;
       background:green;
-      height: 600px;
     }
     .left {
       flex: 1;

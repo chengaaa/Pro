@@ -85,14 +85,15 @@
     }
   }
  
- 
+  .yv-content {
+    padding: 0 0 240px 0;
+  }
   .yv-footer {
       height:240px;
       position:absolute;
-      left:0px;
-
+      left: 0;
+      bottom: 0;
     //  position: fixed;
-     bottom: 0; 
     width: 100%;
     background: #840000;
     color: darkgray;

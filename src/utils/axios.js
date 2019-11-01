@@ -2,6 +2,7 @@ import Axios from 'axios';
 require('dotenv-flow').config();
 const baseURL = `${process.env.PROTOCOL}://${process.env.NODE_ENV === "production" ? process.env.PROXY_HOST : location.hostname}:${process.env.PROXY_PORT}`
 Axios.defaults.baseURL = baseURL;
+Axios.defaults.timeout = 60000;
 // Axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 Axios.defaults.headers.common['Content-Type'] = 'application/json; charset=UTF-8';
 
