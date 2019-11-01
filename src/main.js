@@ -6,7 +6,7 @@ import './registerServiceWorker'
 // import vView from 'vue-view-lazy'
 import ElementUI from 'element-ui';
 require('dotenv-flow').config();
-// import 'element-ui/lib/theme-chalk/index.css';
+import 'element-ui/lib/theme-chalk/index.css';
 // import ViewUI from 'view-design';
 // import 'view-design/dist/styles/iview.css';
 Vue.use(ElementUI);

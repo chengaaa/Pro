@@ -17,6 +17,8 @@
 </template>
 
 <style lang="scss">
+
+
 * {
   list-style: none;
   padding: 0;
@@ -49,6 +51,7 @@
 </style>
 <script>
 import Layout from "./components/Layout";
+import "./assets/icon/iconfont.css";
 
 // import Header from './components/Header'
 export default {

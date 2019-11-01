@@ -1,0 +1,37 @@
+{
+  "id": "1488284",
+  "name": "pro",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1017253",
+      "name": "iOS",
+      "font_class": "ios",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "1111274",
+      "name": "mac",
+      "font_class": "mac",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "2325951",
+      "name": "win",
+      "font_class": "win",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "2325971",
+      "name": "安卓",
+      "font_class": "anzhuo",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    }
+  ]
+}

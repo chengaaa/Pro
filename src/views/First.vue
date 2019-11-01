@@ -6,6 +6,14 @@
     </div>
     </template>
 <style lang="scss" scoped>
+.pig {
+  width: 100%;
+  img {
+  width: 100%;
+
+  }
+}
+
 
 </style>
 <script>

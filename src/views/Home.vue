@@ -28,10 +28,10 @@
       </div>
       <div class="right">
         <ul>
-          <li><a href="">Android 版下载</a></li>
-          <li><a href="">iOS版下载</a></li>
-          <li><a href="">MAC版下载</a></li>
-          <li><a href="">WIN版下载</a></li>
+          <li><i class="iconanzhuo"></i><a href="">Android 版下载</a></li>
+          <li><a href="">iOS 版下载</a></li>
+          <li><a href="">MAC 版下载</a></li>
+          <li><a href="">WIN 版下载</a></li>
          </ul>
 
       </div>
@@ -41,12 +41,13 @@
 </template>
 <style lang="scss" scoped>
 .Home {
+  img{
+    width: 100%;
+  }
  
-    
-  
   
   .Home-4 {
-     height: 400px;
+    //  height: 400px;
     .Home-content   {
       // width: 930px;
       background:brown;
@@ -57,12 +58,33 @@
     .right {
       width: 400px;
       background:green;
+      height: 600px;
+      ul {
+         display: flex;
+         height: 600px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+         margin-bottom:70px;
+         padding-left: 35px;
+     
+      a {
+        color: blue;
+        font-size: 25px;
+       text-decoration:none;
+        &:hover {
+          color: white;
+        }
+         }
+      }
+      }
     }
     .left {
       flex: 1;
       margin-right: 100px;
       background:yellow;
-      height: 400px;
+      height: 600px;
     }
     }
    
