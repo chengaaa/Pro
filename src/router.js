@@ -16,14 +16,16 @@ export default new Router({
     {path:'/Second', component:Second },
     {path:'/Third', component:Third },
     {path:'/Fourth', component:Fourth },
+    {path:'/Home', component:Home },
  
       
       
 
 
     {
-      path: '/Home',
+      path: '/',
       name: 'home',
+      redirect:"/Home",
       component: Home
     },
    
