@@ -28,7 +28,7 @@
     </div>
 
     <div class="yv-content">
-      <router-view></router-view>
+      <slot />
     </div>
 
     <div class="yv-footer">

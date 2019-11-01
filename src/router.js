@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import First from './views/First.vue'
-import Second from './views/Second.vue'
-import Third from './views/Third.vue'
-import Fourth from './views/Fourth.vue'
+import Home from './views/Home'
 
 
 
@@ -12,21 +8,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {path:'/First', component:First },
-    {path:'/Second', component:Second },
-    {path:'/Third', component:Third },
-    {path:'/Fourth', component:Fourth },
-    {path:'/Home', component:Home },
- 
-      
-      
-
-
-    {
-      path: '/Home',
-      name: 'home',
-      component: Home
-    },
+    {path:'/First', component: () => import("./views/First") },
+    {path:'/Second', component: () => import('./views/Home') },
+    {path:'/Third', component: Home },
+    {path:'/Fourth', component: () => import('./views/Fourth')},
+    {path:'/Home', component: () => import('./views/Home') },
     {
       path: '/',
       name: 'home',
