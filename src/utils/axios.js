@@ -1,5 +1,4 @@
 import Axios from 'axios';
-require('dotenv-flow').config();
 const baseURL = `${process.env.PROTOCOL}://${process.env.NODE_ENV === "production" ? process.env.PROXY_HOST : location.hostname}:${process.env.PROXY_PORT}`
 Axios.defaults.baseURL = baseURL;
 Axios.defaults.timeout = 60000;
