@@ -1,64 +1,64 @@
 <template>
   <div class="Home">
     <div class="background">
-    <div class="Home-1">
-      <img src="../assets/jk.jpg" alt />
-    </div>
-    <div class="Home-2">
-      <div>
-        <img src="../assets/dt.jpg" alt />
+      <div class="Home-1">
+        <img src="../assets/jk.jpg" alt />
       </div>
-    </div>
-    <div id="box">
-    <div class="Home-3">
-      <div class="Home-content">
-        <div class="soll">
-          <ul>
-            <li v-for="(item,index) in blackList" :key="index">
-              <img :src="item.img" alt />
+      <div class="Home-2">
+        <div>
+          <img src="../assets/dt.jpg" alt />
+        </div>
+      </div>
+      <div id="box">
+        <div class="Home-3">
+          <div class="Home-content">
+            <div class="soll">
+              <ul>
+                <li v-for="(item,index) in blackList" :key="index">
+                  <img :src="item.img" alt />
 
-              <p>{{item.title}}</p>
-              <span>{{item.text}}</span>
-            </li>
-          </ul>
-        </div>
-        <div class="soll-2">
-          <div class="soll-2-A">
-            <p class="soll-2-A-a">
-              <span>期货交易全球站</span>
-              <span>近24小时成交量267894856美元</span>
-            </p>
-            <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
-          </div>
-          <div class="soll-2-BBB">
-            <div>
-              <div class="soll-2-B">
-                <h3>一手资讯</h3>
-                <p>24小时滚动新闻，最好的投资理财信息</p>
-              </div>
-              <div class="soll-2-B" id="botto">
-                <h3>贵金属交易</h3>
-                <p>现货黄金白银交易透明 随时随地轻松交易</p>
-              </div>
+                  <p>{{item.title}}</p>
+                  <span>{{item.text}}</span>
+                </li>
+              </ul>
             </div>
-            <div class="left-right">
-              <img src="../assets/kk.jpg" alt />
-            </div>
-            <div>
-              <div class="soll-2-B">
-                <h3>数字货币</h3>
-                <p>支持多种币币交易，杠杆，期货，提高收益</p>
+            <div class="soll-2">
+              <div class="soll-2-A">
+                <p class="soll-2-A-a">
+                  <span>期货交易全球站</span>
+                  <span>近24小时成交量267894856美元</span>
+                </p>
+                <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
               </div>
-              <div class="soll-2-B" id="botto">
-                <h3>外汇市场</h3>
-                <p>可开仓多国货币 玩法多 选择多 盈利快</p>
+              <div class="soll-2-BBB">
+                <div>
+                  <div class="soll-2-B">
+                    <h3>一手资讯</h3>
+                    <p>24小时滚动新闻，最好的投资理财信息</p>
+                  </div>
+                  <div class="soll-2-B" id="botto">
+                    <h3>贵金属交易</h3>
+                    <p>现货黄金白银交易透明 随时随地轻松交易</p>
+                  </div>
+                </div>
+                <div class="left-right">
+                  <img src="../assets/kk.jpg" alt />
+                </div>
+                <div>
+                  <div class="soll-2-B">
+                    <h3>数字货币</h3>
+                    <p>支持多种币币交易，杠杆，期货，提高收益</p>
+                  </div>
+                  <div class="soll-2-B" id="botto">
+                    <h3>外汇市场</h3>
+                    <p>可开仓多国货币 玩法多 选择多 盈利快</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
     <div class="Home-4">
       <div class="Home-content">
@@ -89,7 +89,7 @@
 <style lang="scss" scoped>
 .Home {
   .background {
-    background: #F7F7F7;
+    background: #f7f7f7;
   }
   h3 {
     font-weight: 500;
@@ -269,36 +269,36 @@ export default {
       ]
     };
   },
-   mounted() {
-        window.addEventListener("scroll", this.scrollHandle)
+  mounted() {
+    window.addEventListener("scroll", this.scrollHandle);
   },
   methods: {
-    
-  scrollHandle() {
-	var timer = null;
+    scrollHandle() {
+      var timer = null;
 
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var innerHeight = window.innerHeight;
-    var offsetHeight = document.body.offsetHeight;
-    if((scrollTop + innerHeight) < offsetHeight ) {
-			clearTimeout(timer);
+      var scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      var innerHeight = window.innerHeight;
+      var offsetHeight = document.body.offsetHeight;
+      if (scrollTop + innerHeight < offsetHeight) {
+        clearTimeout(timer);
 
-      timer = setTimeout(function() {
-         $("#box").animate({"opacity": 1}, 500, function() {
-					console.log("出现了");
-				})
+        timer = setTimeout(function() {
+          $("#box").animate({ opacity: 1 }, 500, function() {
+            console.log("出现了");
+          });
+        }, 500);
+        //
+      } else {
+        clearTimeout(timer);
+      }
 
-      },500)
-  //  
-      
-    } else {
-      clearTimeout(timer);
+      // console.log($('div'));
+      // console.log("hh")
     }
-   
-
-    // console.log($('div'));
-    // console.log("hh")
-  }
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.scrollHandle);
+  }
 };
 </script>
