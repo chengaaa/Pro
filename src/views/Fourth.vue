@@ -7,7 +7,7 @@
      
     <div class="Second-2">
       <div class="Second-2-a" ><p>留言板</p></div>
-       <div class="Second-2-b">发表您的留言</div>
+       <div class="Second-2-b"><p>发表您的留言</p></div>
       <el-form
         :model="ruleForm"
         :rules="rules"
@@ -48,6 +48,7 @@
       height: 50px;
       line-height: 50px;
       border-bottom: 1px solid #999999;
+      margin-bottom:50px;
      
       p {
            color: #0099FF;
@@ -55,6 +56,15 @@
            text-align: center;
            border-bottom: 3px solid #0099FF;
       }
+    }
+    .Second-2-b {
+      font-size: 13px;
+      margin-bottom: 28px;
+      p{
+
+      padding-left: 26px;
+     
+    }
     }
      }
   }
