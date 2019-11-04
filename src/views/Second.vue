@@ -16,7 +16,7 @@
   .Second {
     .Second-content{
       height: 100%;
-      width: 930px;
+      width: 1200px;
       .Second-pig {
         height: 800px;
         margin: 0 auto;

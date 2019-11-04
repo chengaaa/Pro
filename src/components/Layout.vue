@@ -1,11 +1,12 @@
 <template>
   <div class="he">
     <div class="yv-header">
-      <div class="yv-header-content">
-        <h1>
+       <h1>
           <img id="header-img" :src="imgSrc" class="header-img" />
         </h1>
-
+      <div class="yv-header-content">
+        
+       
         <div class="header-tabs">
           <router-link
             :to="'/' + item.id"
@@ -17,13 +18,11 @@
             :key="index"
           >{{ item.text }}</router-link>
         </div>
-         <div class="header-login-regist">
-          <div class="header-login">登录</div>
-          <div class="header-splid">|</div>
-          <div class="header-login">注册</div>
+        <div class="header-login-regist">
+          <div class="header-login login-regist">登录</div>
+          <!-- <div class="header-splid">|</div> -->
+          <div class="header-regist login-regist">注册</div>
         </div>
-
-       
       </div>
     </div>
 
@@ -43,17 +42,26 @@
 </template>
 <style lang="scss">
 .he {
-    position:relative;
-    width:100%;
-    min-height:100%;
-    
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+
   .yv-header {
     //   padding-bottom: 240px;
-    
+    position: relative;
+    h1 {
+       position: absolute;
+       left:190px;
+       top: -20px;
+    }
+    img {
+      width: 122px;
+    }
 
     .yv-header-content {
       box-sizing: border-box;
-      width: 930px;
+      width: 1200px;
+      margin: 0 auto;
       display: flex;
       .header-img {
         padding-right: 100px;
@@ -64,6 +72,7 @@
         height: 65px;
         line-height: 65px;
         display: flex;
+        margin: 0 auto;
         .header-tab {
           width: 100px;
           margin-right: 58px;
@@ -79,27 +88,52 @@
       }
       .header-login-regist {
         display: -webkit-box;
-        line-height: 65px;
-        padding-left: 120px;
+        // line-height: 65px;
+            margin-top: 18px;
+            text-align: center;
+        // padding-left: 120px;
+        .header-login {
+          margin-right: 40px;
+          background: white;
+          &:hover {
+            color:red;
+          }
+        }
+        .header-regist {
+            width: 85px;
+          height: 35px;
+          line-height: 35px;
+          border-radius: 8%;
+          background: red;
+          color: white;
+          margin-top: -6px;
+          &:hover {
+          background: #999999;
+          // color: red;
+
+             
+          }
+        }
+       
       }
     }
   }
- 
+
   .yv-content {
     padding: 0 0 240px 0;
   }
   .yv-footer {
-      height:240px;
-      position:absolute;
-      left: 0;
-      bottom: 0;
+    height: 240px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     //  position: fixed;
     width: 100%;
     background: #840000;
     color: darkgray;
 
     .yv-footer-content {
-      width: 930px;
+      width:1200px;
       height: 240px;
       margin: 0 auto;
 
@@ -111,21 +145,28 @@
         margin-bottom: 30px;
       }
       .footer-company {
+        width: 1200px;
         display: flex;
+        // align-items: center;
         justify-content: center;
-        padding-left: 80px;
+        // text-align: center;
+        // padding-left: 80px;
         padding-bottom: 44px;
         border-bottom: white 1px solid;
 
         .li {
-          width: 60px;
+          box-sizing: border-box;
+          // width: 60px;
           margin-right: 90px;
           font-size: 15px;
+          &:last-child {
+            margin-right: 0px;
+          }
         }
       }
     }
   }
-   .tab-active {
+  .tab-active {
     color: red;
     border-bottom: red 1.5px solid;
     cursor: pointer;
@@ -163,7 +204,7 @@ export default {
         { id: "Third", text: "合约交易" },
         { id: "Fourth", text: "币币交易" }
       ],
-      imgSrc: require("../assets/logo.png"),
+      imgSrc: require("../assets/BLITZ BOOK 8.png"),
       nowIndex: false,
       activeIndex: false,
       footList: [
@@ -185,7 +226,7 @@ export default {
     // },
     changeTab(index) {
       this.activeIndex = index;
-      console.log("niaho ")
+      console.log("niaho ");
     }
   }
 };

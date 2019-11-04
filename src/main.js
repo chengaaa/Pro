@@ -7,9 +7,11 @@ import './registerServiceWorker'
 import ElementUI from 'element-ui';
 require('dotenv-flow').config();
 import 'element-ui/lib/theme-chalk/index.css';
+import 'jquery';
 // import ViewUI from 'view-design';
 // import 'view-design/dist/styles/iview.css';
 Vue.use(ElementUI);
+// Vue.use($);
 // Vue.use(vView);
 
 // Vue.use(vView,{
