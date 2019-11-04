@@ -217,7 +217,7 @@ export default {
     };
   },
   mounted() {
-    const tabIndex = window.localStorage.getItem("tab");
+    const tabIndex = window.localStorage.getItem("tab") || false;
     this.activeIndex = tabIndex;
   },
   methods: {
