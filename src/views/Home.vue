@@ -9,10 +9,10 @@
           <img src="../assets/dt.jpg" alt />
         </div>
       </div>
-      <div id="box">
-        <div class="Home-3">
-          <div class="Home-content">
-            <div class="soll">
+      <div class="Home-3">
+        <div class="Home-content">
+          <transition name="fade">
+            <div class="soll" v-if="isShow1">
               <ul>
                 <li v-for="(item,index) in blackList" :key="index">
                   <img :src="item.img" alt />
@@ -22,7 +22,9 @@
                 </li>
               </ul>
             </div>
-            <div class="soll-2">
+          </transition>
+          <transition name="fade">
+            <div class="soll-2" v-if="isShow2">
               <div class="soll-2-A">
                 <p class="soll-2-A-a">
                   <span>期货交易全球站</span>
@@ -56,34 +58,36 @@
                 </div>
               </div>
             </div>
+          </transition>  
+        </div>
+      </div>
+    </div>
+    <transition name="fade">
+      <div class="Home-4" v-if="isShow3">
+        <div class="Home-content">
+          <div class="left">
+            <div>空</div>
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <i class="iconanzhuo" width="30px" height="30px"></i>
+                <a href>Android 版下载</a>
+              </li>
+              <li>
+                <a href>iOS 版下载</a>
+              </li>
+              <li>
+                <a href>MAC 版下载</a>
+              </li>
+              <li>
+                <a href>WIN 版下载</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Home-4">
-      <div class="Home-content">
-        <div class="left">
-          <div>空</div>
-        </div>
-        <div class="right">
-          <ul>
-            <li>
-              <i class="iconanzhuo" width="30px" height="30px"></i>
-              <a href>Android 版下载</a>
-            </li>
-            <li>
-              <a href>iOS 版下载</a>
-            </li>
-            <li>
-              <a href>MAC 版下载</a>
-            </li>
-            <li>
-              <a href>WIN 版下载</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </transition> 
   </div>
 </template>
 <style lang="scss" scoped>
@@ -234,9 +238,16 @@
         height: 600px;
       }
     }
-  }
-  #box {
-    opacity: 0;
+    .fade-enter-active {
+      opacity: 1;
+      transition: all .5s linear 0;
+    }
+    .fade-enter {
+      opacity: 0;
+    }
+    .fade-enter-to {
+      opacity: 1;
+    }
   }
 }
 </style>
@@ -266,39 +277,73 @@ export default {
           text: "贴心人工服务 / 专业人工解答",
           img: require("../assets/money.png")
         }
-      ]
+      ],
+      timer: null, // 下拉延时
+      timer1: null, // 刷新置顶延时
+      isShow1: false,
+      isShow2: false,
+      isShow3: false,
+      showNum: 1 
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.scrollHandle);
+    // 刷新置顶
+    this.toTop(() => {
+      window.addEventListener("scroll", this.scrollHandle)
+    }) 
   },
   methods: {
+    /**
+     * @params {Function} 执行置顶之后再监听，直接监听会触发isShow = true
+     */
+    toTop(callback) {
+      clearTimeout(this.timer1);
+      this.timer1 = setTimeout(() => {
+        // window.scrollTo(0,0); 两种置顶都可以
+        document.documentElement.scrollTop = 0;
+        callback() // 执行回调
+        clearTimeout(this.timer1);
+        this.timer1 = null;
+      }, 100)
+    },
+
+    // 懒加载
+    lazyLoad() {
+      this[`isShow${this.showNum}`] = true;
+      this.showNum++;
+    },
+    
+    // 判断滚动条件
+    scrollEvent() {
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      let pageHeight = window.innerHeight;
+      let wholeHeight = document.body.scrollHeight;
+      const emitHeight = wholeHeight - pageHeight - scrollTop
+      return (emitHeight < 200)
+    },
+
+    // 被监听的滚动事件
     scrollHandle() {
-      var timer = null;
+      if (!this.scrollEvent()) return;
+      this.debounce(this.lazyLoad)
+    },
 
-      var scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      var innerHeight = window.innerHeight;
-      var offsetHeight = document.body.offsetHeight;
-      if (scrollTop + innerHeight < offsetHeight) {
-        clearTimeout(timer);
-
-        timer = setTimeout(function() {
-          $("#box").animate({ opacity: 1 }, 500, function() {
-            console.log("出现了");
-          });
-        }, 500);
-        //
-      } else {
-        clearTimeout(timer);
-      }
-
-      // console.log($('div'));
-      // console.log("hh")
+    // 防抖函数
+    debounce(fn ,delay = 50) {
+      clearTimeout(this.timer)
+      this.timer = setTimeout(() => {
+        fn()
+        clearTimeout(this.timer)
+        this.timer = null
+      }, delay)
     }
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.scrollHandle);
-  }
+    // 销毁组件前移除事件
+    window.removeEventListener("scroll", this.scrollHandle)
+  },
+  // beforeDestroy() {
+  //   window.removeEventListener("scroll", this.scrollHandle);
+  // }
 };
 </script>
