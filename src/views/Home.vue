@@ -1,89 +1,93 @@
 <template>
   <div class="Home">
     <div class="background">
-    <div class="Home-1">
-      <img src="../assets/jk.jpg" alt />
-    </div>
-    <div class="Home-2">
-      <div>
-        <img src="../assets/dt.jpg" alt />
+      <div class="Home-1">
+        <img src="../assets/jk.jpg" alt />
       </div>
-    </div>
-    <div id="box">
-    <div class="Home-3">
-      <div class="Home-content">
-        <div class="soll">
-          <ul>
-            <li v-for="(item,index) in blackList" :key="index">
-              <img :src="item.img" alt />
+      <div class="Home-2">
+        <div>
+          <img src="../assets/dt.jpg" alt />
+        </div>
+      </div>
+      <div class="Home-3">
+        <div class="Home-content">
+          <transition name="fade">
+            <div class="soll" v-if="isShow1">
+              <ul>
+                <li v-for="(item,index) in blackList" :key="index">
+                  <img :src="item.img" alt />
 
-              <p>{{item.title}}</p>
-              <span>{{item.text}}</span>
-            </li>
-          </ul>
-        </div>
-        <div class="soll-2">
-          <div class="soll-2-A">
-            <p class="soll-2-A-a">
-              <span>期货交易全球站</span>
-              <span>近24小时成交量267894856美元</span>
-            </p>
-            <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
-          </div>
-          <div class="soll-2-BBB">
-            <div>
-              <div class="soll-2-B">
-                <h3>一手资讯</h3>
-                <p>24小时滚动新闻，最好的投资理财信息</p>
+                  <p>{{item.title}}</p>
+                  <span>{{item.text}}</span>
+                </li>
+              </ul>
+            </div>
+          </transition>
+          <transition name="fade">
+            <div class="soll-2" v-if="isShow2">
+              <div class="soll-2-A">
+                <p class="soll-2-A-a">
+                  <span>期货交易全球站</span>
+                  <span>近24小时成交量267894856美元</span>
+                </p>
+                <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
               </div>
-              <div class="soll-2-B" id="botto">
-                <h3>贵金属交易</h3>
-                <p>现货黄金白银交易透明 随时随地轻松交易</p>
+              <div class="soll-2-BBB">
+                <div>
+                  <div class="soll-2-B">
+                    <h3>一手资讯</h3>
+                    <p>24小时滚动新闻，最好的投资理财信息</p>
+                  </div>
+                  <div class="soll-2-B" id="botto">
+                    <h3>贵金属交易</h3>
+                    <p>现货黄金白银交易透明 随时随地轻松交易</p>
+                  </div>
+                </div>
+                <div class="left-right">
+                  <img src="../assets/kk.jpg" alt />
+                </div>
+                <div>
+                  <div class="soll-2-B">
+                    <h3>数字货币</h3>
+                    <p>支持多种币币交易，杠杆，期货，提高收益</p>
+                  </div>
+                  <div class="soll-2-B" id="botto">
+                    <h3>外汇市场</h3>
+                    <p>可开仓多国货币 玩法多 选择多 盈利快</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="left-right">
-              <img src="../assets/kk.jpg" alt />
-            </div>
-            <div>
-              <div class="soll-2-B">
-                <h3>数字货币</h3>
-                <p>支持多种币币交易，杠杆，期货，提高收益</p>
-              </div>
-              <div class="soll-2-B" id="botto">
-                <h3>外汇市场</h3>
-                <p>可开仓多国货币 玩法多 选择多 盈利快</p>
-              </div>
-            </div>
-          </div>
+          </transition>  
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    <div class="Home-4">
-      <div class="Home-content">
-        <div class="left">
-          <div>空</div>
-        </div>
-        <div class="right">
-          <ul>
-            <li>
-              <i class="iconanzhuo" width="30px" height="30px"></i>
-              <a href>Android 版下载</a>
-            </li>
-            <li>
-              <a href>iOS 版下载</a>
-            </li>
-            <li>
-              <a href>MAC 版下载</a>
-            </li>
-            <li>
-              <a href>WIN 版下载</a>
-            </li>
-          </ul>
+    <transition name="fade">
+      <div class="Home-4" v-if="isShow3">
+        <div class="Home-content">
+          <div class="left">
+            <div>空</div>
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <i class="iconanzhuo" width="30px" height="30px"></i>
+                <a href>Android 版下载</a>
+              </li>
+              <li>
+                <a href>iOS 版下载</a>
+              </li>
+              <li>
+                <a href>MAC 版下载</a>
+              </li>
+              <li>
+                <a href>WIN 版下载</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </transition> 
   </div>
 </template>
 <style lang="scss" scoped>
@@ -234,9 +238,16 @@
         height: 600px;
       }
     }
-  }
-  #box {
-    opacity: 0;
+    .fade-enter-active {
+      opacity: 1;
+      transition: all .5s linear 0;
+    }
+    .fade-enter {
+      opacity: 0;
+    }
+    .fade-enter-to {
+      opacity: 1;
+    }
   }
 }
 </style>
@@ -266,39 +277,70 @@ export default {
           text: "贴心人工服务 / 专业人工解答",
           img: require("../assets/money.png")
         }
-      ]
+      ],
+      timer: null, // 下拉延时
+      timer1: null, // 刷新置顶延时
+      isShow1: false,
+      isShow2: false,
+      isShow3: false,
+      showNum: 1 
     };
   },
-   mounted() {
-        window.addEventListener("scroll", this.scrollHandle)
+  mounted() {
+    // 刷新置顶
+    this.toTop(() => {
+      window.addEventListener("scroll", this.scrollHandle)
+    }) 
   },
   methods: {
+    /**
+     * @params {Function} 执行置顶之后再监听，直接监听会触发isShow = true
+     */
+    toTop(callback) {
+      clearTimeout(this.timer1);
+      this.timer1 = setTimeout(() => {
+        // window.scrollTo(0,0); 两种置顶都可以
+        document.documentElement.scrollTop = 0;
+        callback() // 执行回调
+        clearTimeout(this.timer1);
+        this.timer1 = null;
+      }, 100)
+    },
+
+    // 懒加载
+    lazyLoad() {
+      this[`isShow${this.showNum}`] = true;
+      this.showNum++;
+    },
     
-  scrollHandle() {
-	var timer = null;
+    // 判断滚动条件
+    scrollEvent() {
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      let pageHeight = window.innerHeight;
+      let wholeHeight = document.body.scrollHeight;
+      const emitHeight = wholeHeight - pageHeight - scrollTop
+      return (emitHeight < 200)
+    },
 
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var innerHeight = window.innerHeight;
-    var offsetHeight = document.body.offsetHeight;
-    if((scrollTop + innerHeight) < offsetHeight ) {
-			clearTimeout(timer);
+    // 被监听的滚动事件
+    scrollHandle() {
+      if (!this.scrollEvent()) return;
+      this.debounce(this.lazyLoad)
+    },
 
-      timer = setTimeout(function() {
-         $("#box").animate({"opacity": 1}, 500, function() {
-					console.log("出现了");
-				})
-
-      },500)
-  //  
-      
-    } else {
-      clearTimeout(timer);
+    // 防抖函数
+    debounce(fn ,delay = 50) {
+      clearTimeout(this.timer)
+      this.timer = setTimeout(() => {
+        fn()
+        clearTimeout(this.timer)
+        this.timer = null
+      }, delay)
     }
-   
-
-    // console.log($('div'));
-    // console.log("hh")
-  }
+  },
+  beforeDestroy() {
+    // 销毁组件前移除事件
+    window.removeEventListener("scroll", this.scrollHandle)
   },
 };
 </script>
