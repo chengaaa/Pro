@@ -58,7 +58,7 @@
                 </div>
               </div>
             </div>
-          </transition>  
+          </transition>
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-    </transition> 
+    </transition>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -238,16 +238,12 @@
         height: 600px;
       }
     }
-    .fade-enter-active {
-      opacity: 1;
-      transition: all .5s linear 0;
-    }
-    .fade-enter {
-      opacity: 0;
-    }
-    .fade-enter-to {
-      opacity: 1;
-    }
+  }
+  .fade-enter-active {
+      transition: all .8s linear .0s;
+  }
+  .fade-enter {
+    opacity: 0;
   }
 }
 </style>
@@ -311,6 +307,7 @@ export default {
     lazyLoad() {
       this[`isShow${this.showNum}`] = true;
       this.showNum++;
+      if (this.showNum > 3) this.showNum = 3;
     },
     
     // 判断滚动条件
