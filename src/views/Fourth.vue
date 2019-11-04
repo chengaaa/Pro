@@ -35,15 +35,28 @@
     </div>
   </div>
 </template>
+<style lang="scss">
+       .el-input__inner,.el-textarea__inner {
+    width: 400px;
+  }
+  .el-textarea__inner {
+    height:150px;
+  }
+ 
+</style>
 <style lang="scss" scoped>
 .Second {
+     height: 100%;
   .Second-2-bg {
       background: #f7f7f7;
  
   .Second-2 {
     width: 800px;
+        height: 570px;
     margin: 0 auto;
     background: white;
+  
+  
     .Second-2-a {
       height: 50px;
       line-height: 50px;

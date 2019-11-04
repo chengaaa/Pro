@@ -20,6 +20,13 @@
       "unicode_decimal": 58907
     },
     {
+      "icon_id": "1647436",
+      "name": "安卓",
+      "font_class": "anzhuo1",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
       "icon_id": "2325951",
       "name": "win",
       "font_class": "win",
@@ -32,6 +39,90 @@
       "font_class": "anzhuo",
       "unicode": "e64d",
       "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "2975698",
+      "name": "股票",
+      "font_class": "gupiao",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "4162016",
+      "name": "安卓",
+      "font_class": "anzhuo2",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "4467726",
+      "name": "理财签约",
+      "font_class": "licaiqianyue",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "6857010",
+      "name": "6基金",
+      "font_class": "jijin",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "6857031",
+      "name": "24储备基金",
+      "font_class": "chubeijijin",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "7817259",
+      "name": "Mac",
+      "font_class": "Mac",
+      "unicode": "e8d9",
+      "unicode_decimal": 59609
+    },
+    {
+      "icon_id": "9240325",
+      "name": "mac",
+      "font_class": "mac1",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "9899614",
+      "name": "ios",
+      "font_class": "ios1",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "10261007",
+      "name": "ios",
+      "font_class": "ios2",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "10718704",
+      "name": "安卓",
+      "font_class": "anzhuo3",
+      "unicode": "e724",
+      "unicode_decimal": 59172
+    },
+    {
+      "icon_id": "10759215",
+      "name": "download windows_icon",
+      "font_class": "downloadwindows_icon",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10884440",
+      "name": "债券限额",
+      "font_class": "zhaiquanxiane",
+      "unicode": "e657",
+      "unicode_decimal": 58967
     }
   ]
 }

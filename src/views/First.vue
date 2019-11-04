@@ -18,6 +18,8 @@
     <div class="Second-B">
       <div class="Second-B-1" v-for="(item,index) in titleList" :key="index">
         <div class="Second-B-1a">
+        <i class='iconfont iconfont-1'>{{item.icon}}</i>
+           
           <div>{{item.title}}</div>
           <p>{{item.text}}</p>
           <p>{{item.cont}}</p>
@@ -34,6 +36,14 @@
 </template>
 <style lang="scss" scoped>
 .Second {
+  .iconfont-1 {
+
+      font-size: 30px;
+      position: relative;
+    top: 34px;
+    // left: 5px;
+    color: red;
+     }
   h3,h4 {
     font-weight: 500;
     text-align: center;
@@ -75,7 +85,8 @@
        margin-bottom: 50px;
         height: 145px;
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
+        justify-content: space-between;
         
 
  
@@ -89,7 +100,7 @@
         font-size: 24px;
         padding-left: 45px;
         margin-bottom: 23px;
-        background: url("../assets/jingl.png") no-repeat -30px -24px ;
+        // background: url("../assets/jingl.png") no-repeat -30px -24px ;
         // float: left;
        
 
@@ -110,10 +121,7 @@
         height: 132px;
         // float: right;
 
-     img {
-        // float: right;
-        
-      }
+    
 
   }
  
@@ -135,26 +143,34 @@ export default {
             "沪深、美股、港股的行情报价；深度资料、数据浏览器、财务纵比、条件选股等；经济业务大全；",
           cont:
             "专题统计报表：市场特色资讯专题统计报表，包括市场概况、公司研究、机构研究、盈利预测等；财务预测与估值系统、EXCEL插件、估值计算器；产权交易等专项业务应用。",
-          img: require("../assets/ui.png")
+          img: require("../assets/ui.png"),
+          icon:'\ue620'
         },
         {
           title: "债券",
           text:
             "行情报价；综合分析、到期收益分析等计算辅助工具；深度资料、数据浏览器、期限结构、债券筛选等；",
           cont: "专题统计报表：市场概况、信用债研究、可转债研究等。",
-          img: require("../assets/ud.png")
+          img: require("../assets/ud.png"),
+          icon:'\ue626'
+
         },
         {
           title: "基金",
           text: "业绩排行；基金深度资料、基金筛选、基金比较等；",
           cont: "专题统计报表：包括市场概况、业绩评价、资产配置等；分级基金",
-          img: require("../assets/up.png")
+          img: require("../assets/up.png"),
+          icon:'\ue61d'
+          
         },
         {
           title: "理财",
           text:
             "集合理财、阳光私募、银行理财、信托、保险的全方位数据展示，包括新闻公告研报，日历、深度资料、综合统计、业绩评价、产品筛选比较等，提供各类理财部门必备的资讯、数据和工具。",
-          img: require("../assets/uw.png")
+          img: require("../assets/uw.png"),
+          icon:'\ue629'
+
+         
         }
       ]
     };

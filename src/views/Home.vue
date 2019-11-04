@@ -71,16 +71,21 @@
           <div class="right">
             <ul>
               <li>
-                <i class="iconanzhuo" width="30px" height="30px"></i>
+                <i class="iconfont iconanzhuo3"></i>
                 <a href>Android 版下载</a>
               </li>
               <li>
+                <i class="iconfont iconmac1"></i>
                 <a href>iOS 版下载</a>
               </li>
               <li>
+                <i class="iconfont iconios1"></i>
+
                 <a href>MAC 版下载</a>
               </li>
               <li>
+                <i class=" iconfont icondownloadwindows_icon"></i>
+
                 <a href>WIN 版下载</a>
               </li>
             </ul>
@@ -92,6 +97,13 @@
 </template>
 <style lang="scss" scoped>
 .Home {
+  .iconfont  {
+    font-size: 30px;
+  }
+  .Home .iconfont {
+    font-size: 30px;
+
+  }
   .background {
     background: #f7f7f7;
   }
@@ -201,31 +213,33 @@
     //  height: 400px;
     .Home-content {
       width: 1200px;
-      background: brown;
+      // background: brown;
 
       margin: 0 auto;
 
       display: flex;
       .right {
         width: 400px;
-        background: green;
+        background: #CC3333;
         height: 600px;
         ul {
           display: flex;
           height: 600px;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
+          padding-left: 45px;
           li {
             margin-bottom: 70px;
             padding-left: 35px;
 
             a {
-              color: blue;
+              color: white;
               font-size: 25px;
               text-decoration: none;
+              padding-left: 15px;
               &:hover {
-                color: white;
+                color: blue;
               }
             }
           }
@@ -234,7 +248,7 @@
       .left {
         flex: 1;
         margin-right: 50px;
-        background: yellow;
+        // background: yellow;
         height: 600px;
       }
     }
@@ -282,7 +296,7 @@ export default {
       showNum: 1 
     };
   },
-  mounted() {
+  created() {
     // 刷新置顶
     this.toTop(() => {
       window.addEventListener("scroll", this.scrollHandle)

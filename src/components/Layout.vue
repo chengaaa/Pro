@@ -216,6 +216,9 @@ export default {
       ]
     };
   },
+  mounted () { 
+ this.activeIndex = localStorage.getItem('currentNav') 
+ }, 
   methods: {
     // activeTab(index) {
     //   console.log("jj");
@@ -226,6 +229,7 @@ export default {
     // },
     changeTab(index) {
       this.activeIndex = index;
+      localStorage.setItem("currentNav",this.activeIndex);
       console.log("niaho ");
     }
   }
