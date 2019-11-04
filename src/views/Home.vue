@@ -295,12 +295,11 @@ export default {
     toTop(callback) {
       clearTimeout(this.timer1);
       this.timer1 = setTimeout(() => {
-        // window.scrollTo(0,0); 两种置顶都可以
-        document.documentElement.scrollTop = 0;
+        window.scrollTo(0, 0); // 两种置顶都可以
         callback() // 执行回调
         clearTimeout(this.timer1);
         this.timer1 = null;
-      }, 100)
+      }, 300)
     },
 
     // 懒加载
