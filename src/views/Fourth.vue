@@ -4,7 +4,10 @@
       <img src="../assets/pig.jpg" alt />
     </div>
     <div class="Second-2-bg">
+     
     <div class="Second-2">
+      <div class="Second-2-a" ><p>留言板</p></div>
+       <div class="Second-2-b">发表您的留言</div>
       <el-form
         :model="ruleForm"
         :rules="rules"
@@ -40,6 +43,19 @@
   .Second-2 {
     width: 800px;
     margin: 0 auto;
+    background: white;
+    .Second-2-a {
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #999999;
+     
+      p {
+           color: #0099FF;
+           width: 80px;
+           text-align: center;
+           border-bottom: 3px solid #0099FF;
+      }
+    }
      }
   }
 }
