@@ -5,8 +5,27 @@
         <img src="../assets/jk.jpg" alt />
       </div>
       <div class="Home-2">
-        <div>
-          <img src="../assets/dt.jpg" alt />
+        <div v-for="(item,index) in eosList" :key="index" class="Home-2-A">
+          <!-- <img :src="item.img" alt=""> -->
+          <div class="flex">
+            <div class="Home-2-b">
+              <!-- <i class="iconfont iconfont-1">{{item.icon}}</i> -->
+              <!-- <span>EOS</span> -->
+              <img :src="item.img" alt />
+            </div>
+            <div class="Home-2-c">
+              <span>指数</span>
+            </div>
+          </div>
+
+          <div class="Home-2-d">
+            <span>{{item.usd}}</span>
+            <span>≈</span>
+            <span>{{((item.usd)*(item.rate)).toFixed(2)}}CNY</span>
+          </div>
+          <div class="Home-2-e">
+            <p>{{item.aindex}}%</p>
+          </div>
         </div>
       </div>
       <div class="Home-3">
@@ -26,10 +45,10 @@
           <transition name="fade">
             <div class="soll-2" v-if="isShow2">
               <div class="soll-2-A">
-                <p class="soll-2-A-a">
+                <!-- <p class="soll-2-A-a">
                   <span>期货交易全球站</span>
                   <span>近24小时成交量267894856美元</span>
-                </p>
+                </p>-->
                 <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
               </div>
               <div class="soll-2-BBB">
@@ -65,30 +84,37 @@
     <transition name="fade">
       <div class="Home-4" v-if="isShow3">
         <div class="Home-content">
-          <div class="left">
-            <div>空</div>
-          </div>
-          <div class="right">
-            <ul>
-              <li>
-                <i class="iconfont iconanzhuo3"></i>
-                <a href>Android 版下载</a>
-              </li>
-              <li>
-                <i class="iconfont iconmac1"></i>
-                <a href>iOS 版下载</a>
-              </li>
-              <li>
-                <i class="iconfont iconios1"></i>
+          <div class="Home-4-A">
+            <div class="top">
+              <h3>多平台终端选择</h3>
+              <p>iOS、Android、Mac、Windows 多个平台支持全业务功能</p>
+            </div>
+            <div class="fot">
+              <div class="fot-left">
+                <span>
+                  <i class="iconfont iconanzhuo4"></i>
 
-                <a href>MAC 版下载</a>
-              </li>
-              <li>
-                <i class=" iconfont icondownloadwindows_icon"></i>
+                  <a href>Android 版下载</a>
+                </span>
+                <span>
+                  <i class="iconfont iconapple"></i>
 
-                <a href>WIN 版下载</a>
-              </li>
-            </ul>
+                  <a href>iOS 版下载</a>
+                </span>
+              </div>
+              <div class="fot-right">
+                <span>
+                  <i class="iconfont iconapple"></i>
+
+                  <a href>MAC 版下载</a>
+                </span>
+                <span>
+                  <i class="iconfont iconwin"></i>
+
+                  <a href>WIN 版下载</a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -97,12 +123,11 @@
 </template>
 <style lang="scss" scoped>
 .Home {
-  .iconfont  {
+  .iconfont {
     font-size: 30px;
   }
   .Home .iconfont {
     font-size: 30px;
-
   }
   .background {
     background: #f7f7f7;
@@ -115,7 +140,71 @@
   }
   .Home-2 {
     margin-bottom: 100px;
+    .Home-2-A {
+      // width:50px ;
+      // height: 50px;
+      box-shadow: 5px 5px 5px #888888;
+      padding-top: 12px;
+      box-sizing: border-box;
+
+      width: 235px;
+      height: 160px;
+      // &:hover {
+      //    box-shadow: 5px 5px 5px #888888;
+      // }
+
+      .flex {
+        display: flex;
+        //  justify-content: center;
+        align-items: center;
+
+        .Home-2-b {
+          // display: flex;
+          // flex-direction:column;
+          width: 100px;
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+      .Home-2-c {
+        span {
+          font-size: 16px;
+        }
+      }
+      .Home-2-d {
+        //  margin:0 auto;
+        //  text-align: center;
+        span {
+          color: #cc3333;
+          font-size: 14px;
+          line-height: 38px;
+          &:first-child {
+            font-size: 20px;
+          }
+        }
+      }
+      .Home-2-e {
+        width: 83px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background: #cc3333;
+        color: #f7f7f7;
+        border-radius: 5%;
+        //  margin: 0 auto;
+        font-size: 15px;
+      }
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
+
   .Home-3 {
     margin: 0 auto;
     .Home-content {
@@ -211,58 +300,94 @@
 
   .Home-4 {
     //  height: 400px;
+    background: #990000;
     .Home-content {
       width: 1200px;
       // background: brown;
 
       margin: 0 auto;
-
-      display: flex;
-      .right {
-        width: 400px;
-        background: #CC3333;
-        height: 600px;
-        ul {
+      .Home-4-A {
+        height: 400px;
+        text-align: center;
+        .top {
+          padding-top: 100px;
+          margin-bottom: 80px;
+          h3 {
+            color: white;
+            font-size: 38px;
+          }
+          p {
+            color: #738096;
+            //  height: 26px;
+            line-height: 32px;
+          }
+        }
+        .fot {
           display: flex;
-          height: 600px;
-          flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
-          padding-left: 45px;
-          li {
-            margin-bottom: 70px;
-            padding-left: 35px;
-
-            a {
-              color: white;
-              font-size: 25px;
-              text-decoration: none;
-              padding-left: 15px;
-              &:hover {
-                color: blue;
+          .fot-left,
+          .fot-right {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            height: 80px;
+            span {
+              line-height: 35px;
+              a {
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                padding-left: 10px;
               }
+            }
+          }
+
+          .fot-left {
+            border-right: 2px solid white;
+            padding-right: 100px;
+             span:last-child {
+               padding-right:30px;
+               margin-top:15px;
+             }
+            .iconanzhuo4,
+            .iconapple {
+              color: white;
+              font-size: 22px;
+            }
+          }
+          .fot-right {
+            padding-left: 100px;
+             span:last-child {
+               margin-top:15px;
+             }
+            .iconapple,
+            .iconwin {
+              color: white;
+              font-size: 22px;
             }
           }
         }
       }
-      .left {
-        flex: 1;
-        margin-right: 50px;
-        // background: yellow;
-        height: 600px;
-      }
     }
   }
-  .fade-enter-active {
-      transition: all .8s linear .0s;
-  }
-  .fade-enter {
-    opacity: 0;
-  }
+}
+.left {
+  flex: 1;
+  margin-right: 50px;
+  // background: yellow;
+  height: 600px;
+}
+
+.fade-enter-active {
+  transition: all 0.8s linear 0s;
+}
+.fade-enter {
+  opacity: 0;
 }
 </style>
 <script>
 import "../assets/icon/iconfont.css";
+
 export default {
   data() {
     return {
@@ -288,19 +413,39 @@ export default {
           img: require("../assets/money.png")
         }
       ],
+      eosList: [
+        {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+
+          img: require("../assets/imgapp.jpg")
+          //  img: require("../assets/eos.jpg"),
+        }
+      ],
+
       timer: null, // 下拉延时
       timer1: null, // 刷新置顶延时
       isShow1: false,
       isShow2: false,
       isShow3: false,
-      showNum: 1 
+      showNum: 1
     };
   },
+  computed: {
+    //  usd:{
+    //    get: function() {
+    //      return (this.cny/CNY_USD).toFixed(2)
+    //    }
+    //  },
+  },
+
   created() {
     // 刷新置顶
     this.toTop(() => {
-      window.addEventListener("scroll", this.scrollHandle)
-    }) 
+      window.addEventListener("scroll", this.scrollHandle);
+    });
   },
   methods: {
     /**
@@ -310,10 +455,10 @@ export default {
       clearTimeout(this.timer1);
       this.timer1 = setTimeout(() => {
         window.scrollTo(0, 0); // 两种置顶都可以
-        callback() // 执行回调
+        callback(); // 执行回调
         clearTimeout(this.timer1);
         this.timer1 = null;
-      }, 300)
+      }, 300);
     },
 
     // 懒加载
@@ -322,36 +467,37 @@ export default {
       this.showNum++;
       if (this.showNum > 3) this.showNum = 3;
     },
-    
+
     // 判断滚动条件
     scrollEvent() {
-      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
       let pageHeight = window.innerHeight;
       let wholeHeight = document.body.scrollHeight;
-      const emitHeight = wholeHeight - pageHeight - scrollTop
-      return (emitHeight < 200)
+      const emitHeight = wholeHeight - pageHeight - scrollTop;
+      return emitHeight < 200;
     },
 
     // 被监听的滚动事件
     scrollHandle() {
       if (!this.scrollEvent()) return;
-      this.debounce(this.lazyLoad)
+      this.debounce(this.lazyLoad);
     },
 
     // 防抖函数
-    debounce(fn ,delay = 50) {
-      clearTimeout(this.timer)
+    debounce(fn, delay = 50) {
+      clearTimeout(this.timer);
       this.timer = setTimeout(() => {
-        fn()
-        clearTimeout(this.timer)
-        this.timer = null
-      }, delay)
+        fn();
+        clearTimeout(this.timer);
+        this.timer = null;
+      }, delay);
     }
   },
   beforeDestroy() {
     // 销毁组件前移除事件
-    window.removeEventListener("scroll", this.scrollHandle)
-  },
+    window.removeEventListener("scroll", this.scrollHandle);
+  }
   // beforeDestroy() {
   //   window.removeEventListener("scroll", this.scrollHandle);
   // }

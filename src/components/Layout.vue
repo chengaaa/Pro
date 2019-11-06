@@ -49,10 +49,13 @@
   .yv-header {
     //   padding-bottom: 240px;
     position: relative;
+    // padding-left: 100px;
+    // box-sizing: border-box;
     h1 {
        position: absolute;
-       left:190px;
+       left:120px;
        top: -20px;
+       padding-left:100px;
     }
     img {
       width: 122px;
