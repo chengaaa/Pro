@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "47559",
+      "name": "ltc_trade",
+      "font_class": "ltctrade",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
       "icon_id": "157762",
       "name": "苹果",
       "font_class": "pingguo",
@@ -69,11 +76,32 @@
       "unicode_decimal": 58912
     },
     {
+      "icon_id": "3253839",
+      "name": "USDT",
+      "font_class": "USDT",
+      "unicode": "e6db",
+      "unicode_decimal": 59099
+    },
+    {
       "icon_id": "3293219",
       "name": "安卓",
       "font_class": "anzhuo4",
       "unicode": "e602",
       "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "3525424",
+      "name": "BCH",
+      "font_class": "BCH",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "4146706",
+      "name": "XRP",
+      "font_class": "XRP",
+      "unicode": "e612",
+      "unicode_decimal": 58898
     },
     {
       "icon_id": "4162016",
@@ -97,11 +125,46 @@
       "unicode_decimal": 59051
     },
     {
+      "icon_id": "5376028",
+      "name": "ETH",
+      "font_class": "ETH",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "5442946",
+      "name": "XRP",
+      "font_class": "XRP1",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
       "icon_id": "5481502",
       "name": "ios",
       "font_class": "apple",
       "unicode": "e603",
       "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5874640",
+      "name": "eth",
+      "font_class": "eth",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "5963930",
+      "name": "XRP",
+      "font_class": "ziyuan",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "6149435",
+      "name": "BCH",
+      "font_class": "ziyuan1",
+      "unicode": "e759",
+      "unicode_decimal": 59225
     },
     {
       "icon_id": "6857010",
@@ -125,6 +188,13 @@
       "unicode_decimal": 58923
     },
     {
+      "icon_id": "7221143",
+      "name": "XRP",
+      "font_class": "XRP2",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
       "icon_id": "7741032",
       "name": "EOS",
       "font_class": "EOS1",
@@ -139,11 +209,39 @@
       "unicode_decimal": 59609
     },
     {
+      "icon_id": "7844305",
+      "name": "usdt",
+      "font_class": "usdt",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "8017782",
+      "name": "btc",
+      "font_class": "btc",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "8017783",
+      "name": "eth",
+      "font_class": "eth1",
+      "unicode": "e6ae",
+      "unicode_decimal": 59054
+    },
+    {
       "icon_id": "8427993",
       "name": "安卓",
       "font_class": "anzhuo5",
       "unicode": "e604",
       "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "8691536",
+      "name": "LTC",
+      "font_class": "LTC",
+      "unicode": "e645",
+      "unicode_decimal": 58949
     },
     {
       "icon_id": "9137026",
@@ -174,6 +272,13 @@
       "unicode_decimal": 58933
     },
     {
+      "icon_id": "10390953",
+      "name": "LTC新",
+      "font_class": "LTCxin",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
       "icon_id": "10718704",
       "name": "安卓",
       "font_class": "anzhuo3",
@@ -193,6 +298,13 @@
       "font_class": "zhaiquanxiane",
       "unicode": "e657",
       "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "11463871",
+      "name": "usdt icon",
+      "font_class": "usdticon",
+      "unicode": "e611",
+      "unicode_decimal": 58897
     }
   ]
 }

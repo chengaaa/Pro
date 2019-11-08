@@ -48,14 +48,17 @@
 
   .yv-header {
     //   padding-bottom: 240px;
-    position: relative;
+    // position: relative;
     // padding-left: 100px;
     // box-sizing: border-box;
+    display: flex;
+    height: 85px;
     h1 {
-       position: absolute;
-       left:120px;
-       top: -20px;
-       padding-left:100px;
+      //  position: absolute;
+      //  left:120px;
+      //  top: -20px;
+      //  padding-left:100px;
+   margin-left: 240px;
     }
     img {
       width: 122px;
@@ -66,16 +69,17 @@
       width: 1200px;
       margin: 0 auto;
       display: flex;
+          padding-top: 18px;
       .header-img {
         padding-right: 100px;
       }
 
       margin: 0 auto;
       .header-tabs {
-        height: 65px;
-        line-height: 65px;
+        // height: 65px;
+        // line-height: 65px;
         display: flex;
-        margin: 0 auto;
+        // margin: 0 auto;
         .header-tab {
           width: 100px;
           margin-right: 58px;
@@ -93,6 +97,7 @@
         display: -webkit-box;
         // line-height: 65px;
             margin-top: 18px;
+                padding-left: 145px;
             text-align: center;
         // padding-left: 120px;
         .header-login {
@@ -132,7 +137,7 @@
     bottom: 0;
     //  position: fixed;
     width: 100%;
-    background: #840000;
+    background: #5A0103;
     color: darkgray;
 
     .yv-footer-content {

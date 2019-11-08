@@ -9,13 +9,6 @@
       </div>
     </div>
 
-    
-      <button @click="show = !show">toggle</button>
-      <div class="bu">
-      <transition name="slide-fade">
-        <p v-if="show">你好</p>
-      </transition>
-    </div>
   </div>
 </template>
 <style lang="scss" scoped>

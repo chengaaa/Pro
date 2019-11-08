@@ -9,12 +9,14 @@
           <!-- <img :src="item.img" alt=""> -->
           <div class="flex">
             <div class="Home-2-b">
-              <!-- <i class="iconfont iconfont-1">{{item.icon}}</i> -->
-              <!-- <span>EOS</span> -->
-              <img :src="item.img" alt />
+              <!-- <i class="iconfont iconEOS1"></i> -->
+        <i class='iconfont iconEOS-1'>{{item.icon}}</i>
+
+              <span>{{item.text}}</span>
+              <!-- <img :src="item.img" alt /> -->
             </div>
             <div class="Home-2-c">
-              <span>指数</span>
+              <!-- <span>指数</span> -->
             </div>
           </div>
 
@@ -140,18 +142,25 @@
   }
   .Home-2 {
     margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
     .Home-2-A {
       // width:50px ;
       // height: 50px;
-      box-shadow: 5px 5px 5px #888888;
+      // box-shadow: 5px 5px 5px #888888;
       padding-top: 12px;
       box-sizing: border-box;
+      border: 1px solid #cccccc;
+      padding-left: 15px;
+      margin-top: 30px;
+      border-radius: 5%;
+   
 
-      width: 235px;
+      width: 230px;
       height: 160px;
-      // &:hover {
-      //    box-shadow: 5px 5px 5px #888888;
-      // }
+      &:hover {
+         box-shadow: 5px 5px 5px #888888;
+      }
 
       .flex {
         display: flex;
@@ -162,8 +171,12 @@
           // display: flex;
           // flex-direction:column;
           width: 100px;
+          .iconEOS-1 {
+            font-size: 34px;
+          }
           span {
-            font-size: 16px;
+            font-size: 22px;
+            padding-left: 16px;
           }
         }
       }
@@ -185,7 +198,7 @@
         }
       }
       .Home-2-e {
-        width: 83px;
+        width: 80px;
         height: 25px;
         line-height: 25px;
         text-align: center;
@@ -193,7 +206,7 @@
         color: #f7f7f7;
         border-radius: 5%;
         //  margin: 0 auto;
-        font-size: 15px;
+        font-size: 13px;
       }
     }
 
@@ -300,7 +313,7 @@
 
   .Home-4 {
     //  height: 400px;
-    background: #990000;
+    background: #6B1214;
     .Home-content {
       width: 1200px;
       // background: brown;
@@ -343,7 +356,7 @@
           }
 
           .fot-left {
-            border-right: 2px solid white;
+            border-right: 1px solid #999999;
             padding-right: 100px;
              span:last-child {
                padding-right:30px;
@@ -420,9 +433,75 @@ export default {
           //指数
           aindex: 5.64,
 
+          img: require("../assets/imgapp.jpg"),
+          icon:'\ue621',
+          text:"EOS"
+
+          //  img: require("../assets/eos.jpg"),
+        },
+         {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+          icon:'\ue624', 
+          text:"BCH" ,
           img: require("../assets/imgapp.jpg")
           //  img: require("../assets/eos.jpg"),
-        }
+        },
+         {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+          icon:'\ue6ad',
+          text:"BTC",
+              
+          img: require("../assets/imgapp.jpg")
+          //  img: require("../assets/eos.jpg"),
+        },
+         {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+          icon:'\ue612',
+          text:"XRP",
+          img: require("../assets/imgapp.jpg")
+          //  img: require("../assets/eos.jpg"),
+        },
+         {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+         icon:'\ue6ae',
+          text:"ETH",
+         
+          img: require("../assets/imgapp.jpg")
+          //  img: require("../assets/eos.jpg"),
+        },
+         {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+          
+          icon:'\ue645',
+          text:"LTC",
+          img: require("../assets/imgapp.jpg")
+          //  img: require("../assets/eos.jpg"),
+        },
+         {
+          usd: 183.86,
+          rate: 6.96,
+          //指数
+          aindex: 5.64,
+          icon:'\ue6db',
+          text:"USDT",
+          img: require("../assets/imgapp.jpg")
+          //  img: require("../assets/eos.jpg"),
+        },
       ],
 
       timer: null, // 下拉延时
