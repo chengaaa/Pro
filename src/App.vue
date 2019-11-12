@@ -8,7 +8,7 @@
 
     <!-- <div class="right"><span>登录</span><span>注册</span></div>
     </div>-->
-    <Layout> 
+    <layout> 
       <router-view></router-view>
     </Layout>
 
@@ -50,7 +50,7 @@
 }
 </style>
 <script>
-import Layout from "./components/Layout";
+import Layout from "./components/layout";
 import "./assets/icon/iconfont.css";
 
 // import Header from './components/Header'

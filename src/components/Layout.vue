@@ -82,7 +82,7 @@
         // margin: 0 auto;
         .header-tab {
           width: 100px;
-          margin-right: 58px;
+          margin-right: 130px;
           font-size: 15px;
           text-align: center;
           line-height: 65px;
@@ -99,6 +99,8 @@
             margin-top: 18px;
                 padding-left: 145px;
             text-align: center;
+                font-size: 25px;
+    line-height: 30px;
         // padding-left: 120px;
         .header-login {
           margin-right: 40px;
@@ -109,8 +111,8 @@
         }
         .header-regist {
             width: 85px;
-          height: 35px;
-          line-height: 35px;
+          height: 44px;
+          line-height: 44px;
           border-radius: 8%;
           background: red;
           color: white;
@@ -207,10 +209,10 @@ export default {
       tabList: [
         { id: "Home", text: "首页" },
 
-        { id: "First", text: "杠杆交易" },
+        // { id: "First", text: "杠杆交易" },
         { id: "Second", text: "行情图表" },
         { id: "Third", text: "合约交易" },
-        { id: "Fourth", text: "币币交易" }
+        // { id: "Fourth", text: "币币交易" }
       ],
       imgSrc: require("../assets/BLITZ BOOK 8.png"),
       nowIndex: false,

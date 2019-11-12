@@ -8,10 +8,10 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {path:'/First', component: () => import("./views/First") },
+    // {path:'/First', component: () => import("./views/First") },
     {path:'/Second', component: () => import('./views/Second') },
     {path:'/Third', component: () => import('./views/Third')},
-    {path:'/Fourth', component: () => import('./views/Fourth')},
+    // {path:'/Fourth', component: () => import('./views/Fourth')},
     {path:'/Home', component: () => import('./views/Home') },
     {
       path: '/',

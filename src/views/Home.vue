@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <div class="background">
+    
       <div class="Home-1">
         <img src="../assets/jk.jpg" alt />
       </div>
@@ -44,14 +44,14 @@
               </ul>
             </div>
           </transition>
-          <transition name="fade">
+          <!-- <transition name="fade">
             <div class="soll-2" v-if="isShow2">
-              <div class="soll-2-A">
+              <div class="soll-2-A"> -->
                 <!-- <p class="soll-2-A-a">
                   <span>期货交易全球站</span>
                   <span>近24小时成交量267894856美元</span>
                 </p>-->
-                <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
+                <!-- <p class="p">为全球80多个国家和地区提供，安全快捷的数字资产和黄金外汇交易服务</p>
               </div>
               <div class="soll-2-BBB">
                 <div>
@@ -79,10 +79,10 @@
                 </div>
               </div>
             </div>
-          </transition>
+          </transition> -->
         </div>
       </div>
-    </div>
+    
     <transition name="fade">
       <div class="Home-4" v-if="isShow3">
         <div class="Home-content">
@@ -98,13 +98,15 @@
 
                   <a href>Android 版下载</a>
                 </span>
+                </div>
+                <div class="fot-right">
                 <span>
                   <i class="iconfont iconapple"></i>
 
                   <a href>iOS 版下载</a>
                 </span>
               </div>
-              <div class="fot-right">
+              <!-- <div class="fot-right">
                 <span>
                   <i class="iconfont iconapple"></i>
 
@@ -115,7 +117,7 @@
 
                   <a href>WIN 版下载</a>
                 </span>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -132,7 +134,7 @@
     font-size: 30px;
   }
   .background {
-    background: #f7f7f7;
+    // background: #f7f7f7;
   }
   h3 {
     font-weight: 500;
@@ -338,18 +340,18 @@
         .fot {
           display: flex;
           justify-content: center;
-          .fot-left,
-          .fot-right {
-            display: flex;
-            flex-direction: column;
-            width: 230px;
+          .fot-left,.fot-right
+         {
+            // display: flex;
+            // flex-direction: column;
+            width: 240px;
             height: 80px;
             span {
               line-height: 35px;
               a {
                 text-decoration: none;
                 color: white;
-                font-size: 14px;
+                font-size: 24px;
                 padding-left: 10px;
               }
             }
@@ -454,7 +456,7 @@ export default {
           rate: 6.96,
           //指数
           aindex: 5.64,
-          icon:'\ue6ad',
+          icon:'\ue637',
           text:"BTC",
               
           img: require("../assets/imgapp.jpg")
@@ -497,7 +499,7 @@ export default {
           rate: 6.96,
           //指数
           aindex: 5.64,
-          icon:'\ue6db',
+          icon:'\ue611',
           text:"USDT",
           img: require("../assets/imgapp.jpg")
           //  img: require("../assets/eos.jpg"),
@@ -544,7 +546,7 @@ export default {
     lazyLoad() {
       this[`isShow${this.showNum}`] = true;
       this.showNum++;
-      if (this.showNum > 3) this.showNum = 3;
+      if (this.showNum > 4) this.showNum = 4;
     },
 
     // 判断滚动条件
@@ -564,7 +566,7 @@ export default {
     },
 
     // 防抖函数
-    debounce(fn, delay = 50) {
+    debounce(fn, delay = 15) {
       clearTimeout(this.timer);
       this.timer = setTimeout(() => {
         fn();

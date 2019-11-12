@@ -118,6 +118,13 @@
       "unicode_decimal": 58921
     },
     {
+      "icon_id": "4820512",
+      "name": "btc",
+      "font_class": "btc1",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
       "icon_id": "5158523",
       "name": "EOS",
       "font_class": "EOS",
